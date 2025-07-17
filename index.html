@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PageAudit – Eerlijke website-audits</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SEO- en toegankelijkheidsaudits zonder jargon. Concreet, transparant en menselijk." />
+
+    <link rel="stylesheet" href="static/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      .icon-box {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: left;
+        height: 100%;
+      }
+      .icon-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+      .icon-box i {
+        color: #3a8dff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .icon-box h5 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
+      }
+      .icon-box p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+      .section-intro {
+        max-width: 700px;
+        margin: 0 auto 2rem auto;
+      }
+      .eea-section {
+        background: linear-gradient(135deg, #3a8dff 0%, #004aad 100%);
+        color: #fff;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        margin-top: 4rem;
+        text-align: left;
+      }
+      .eea-section h3 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .eea-section p {
+        color: #e0e7ff;
+      }
+      .eea-highlight {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+      }
+      .eea-highlight p {
+        margin: 0;
+        color: #ffffff;
+      }
+      .process-step {
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .process-step:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+      }
+      .process-step img {
+        height: 70px;
+        margin-bottom: 1rem;
+      }
+      .process-step h4 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .process-step p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+      .accordion-button {
+        background-color: #fff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #f1f5f9;
+        color: #196cd4;
+        box-shadow: none;
+        font-weight: 500;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+        border-color: transparent;
+      }
+
+      .accordion-body {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+      <div class="container px-lg-4">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="static/img/pageaudit_icon_dark.svg" alt="PageAudit logo" height="32" class="me-2" />
+          <span class="fw-bold">PageAudit</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </div>
+    </nav>
+
+    <section class="py-5">
+      <div class="container py-5 px-lg-4 hero-section">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <h1 class="display-5 fw-bold">Jouw copiloot voor webkwaliteit</h1>
+            <p class="lead mt-3">
+              Geen standaardrapporten, maar persoonlijke audits rond SEO en toegankelijkheid. Ik scan je website, leg uit wat beter kan en lever een concreet actieplan.
+            </p>
+            <a href="contact.html" class="btn btn-primary px-4 py-2 mt-3">Plan een gratis kennismaking</a>
+          </div>
+          <div class="col-md-6 text-center d-none d-md-block">
+            <img src="static/img/background_visual.jpg" alt="Dashboard illustratie" class="img-fluid" style="max-height: 400px" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" style="background: #f8f9fb">
+      <div class="container">
+        <div class="text-center mb-5 section-intro">
+          <h2 class="fw-bold mb-4">Hoe werkt het?</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="process-step">
+              <img src="static/img/scannen_icon.jpg" alt="Scan pictogram" />
+              <h4>Volledige website-scan</h4>
+              <p>Ik crawle je hele website en check op SEO, toegankelijkheid en broken links. Zo weet je exact waar de knelpunten zitten.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="process-step">
+              <img src="static/img/backlog_icon.jpg" alt="Backlog pictogram" />
+              <h4>Overzichtelijke rapporten</h4>
+              <p>Je ontvangt twee Excel-rapporten: één voor SEO en één voor toegankelijkheid, telkens met uitleg en concrete aanbevelingen.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="process-step">
+              <img src="static/img/verbeteren_icon.jpg" alt="Verbeteren pictogram" />
+              <h4>Actieplan & begeleiding</h4>
+              <p>Wil je hulp bij de opvolging? Dan schrijf ik een actieplan en leg ik alles stap voor stap uit. Eén aanspreekpunt, geen gedoe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container hero-section">
+        <div class="row align-items-center">
+          <div class="col-md-5 mb-4 mb-md-0 text-center">
+            <img src="static/img/portret.png" alt="Samenwerken illustratie" class="img-fluid" style="max-width: 400px" />
+          </div>
+          <div class="col-md-7">
+            <h2 class="fw-bold mb-4">Eén aanspreekpunt. Geen gedoe.</h2>
+            <p class="mb-3">
+              Ik ben Nils Govaerts, de persoon achter PageAudit. Oorspronkelijk opgeleid als grafisch vormgever, waardoor ik oog voor detail heb ontwikkeld dat je in alles
+              terugziet. Ondertussen werk ik al jaren als webmaster en digitale kwaliteitsbewaker met een sterke focus op SEO en toegankelijkheid.
+            </p>
+            <p class="mb-3">
+              Ik geloof niet alleen dat een website vindbaar moet zijn, maar ook bruikbaar voor iedereen. Dat betekent: duidelijke content, snelle laadtijden en een site die ook
+              werkt voor mensen met een beperking.
+            </p>
+            <p class="mb-3">
+              Na een volledige scan van jouw website ontvang je geen generiek rapport, maar twee heldere Excel-bestanden die specifiek op jouw site zijn afgestemd. Eén voor
+              SEO-issues, één voor toegankelijkheidsproblemen. Elk probleem wordt uitgelegd in begrijpelijke taal. Geen droge lijsten, maar duidelijke prioriteiten en concrete
+              aanbevelingen.
+            </p>
+            <p class="mb-3">
+              Heb je behoefte aan extra begeleiding? Dan werk ik graag samen met jou een actieplan uit op maat van je organisatie. Zo weet je precies wat de volgende stappen zijn
+              om je website te verbeteren.
+            </p>
+            <p class="mb-3">
+              Of je nu een kleine zelfstandige bent of een grote organisatie, ik help je graag verder. Je spreekt rechtstreeks met mij, zonder tussenpersonen of accountmanagers.
+              Samen maken we je website beter, stap voor stap.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" style="background: linear-gradient(135deg, #f8f9fb 0%, #ffffff 100%)">
+      <div class="container">
+        <div class="text-center mb-5 section-intro">
+          <h2 class="fw-bold mb-3">Waarom is dit belangrijk?</h2>
+          <p class="lead text-muted">Je website moet vindbaar én bruikbaar zijn. Dat is goed voor je klanten, je imago en je resultaten.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-magnifying-glass-chart"></i>
+              <h5>Beter gevonden worden</h5>
+              <p>Google houdt van websites die technisch in orde zijn. Een sterke basis zorgt voor betere posities in de zoekresultaten.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-universal-access"></i>
+              <h5>Toegankelijkheid</h5>
+              <p>Een website die voor iedereen werkt is klantvriendelijk, wettelijk verplicht voor veel bedrijven én goed voor je reputatie.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-box">
+              <i class="fa-solid fa-comments"></i>
+              <h5>Duidelijke communicatie</h5>
+              <p>Geen wollige rapporten, maar concrete actiepunten in gewone taal. Je weet precies wat er beter kan én hoe.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container pb-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <h3 class="fw-bold text-dark">Wat is de EAA?</h3>
+            <p class="lead text-muted">
+              De
+              <strong>European Accessibility Act</strong>
+              (EAA) verplicht vanaf 2025 bedrijven om hun digitale diensten toegankelijk te maken voor iedereen.
+            </p>
+            <p class="text-muted">
+              Dit geldt voor o.a.
+              <strong>banken, verzekeraars, telecombedrijven en webshops</strong>
+              . Maar eigenlijk is het voor élke organisatie slim om hier werk van te maken.
+            </p>
+
+            <div class="row mt-4">
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="fa-solid fa-circle-check me-3" style="color: #3399ff; font-size: 1.5rem"></i>
+                  <div>
+                    <h6 class="mb-1 text-dark">Alternatieve teksten</h6>
+                    <p class="text-muted" style="font-size: 0.95rem">Afbeeldingen krijgen beschrijvingen zodat schermlezers ze begrijpen.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="fa-solid fa-circle-check me-3" style="color: #3399ff; font-size: 1.5rem"></i>
+                  <div>
+                    <h6 class="mb-1 text-dark">Leesbaarheid</h6>
+                    <p class="text-muted" style="font-size: 0.95rem">Goed contrast, duidelijke teksten en eenvoudige navigatie.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="fa-solid fa-circle-check me-3" style="color: #3399ff; font-size: 1.5rem"></i>
+                  <div>
+                    <h6 class="mb-1 text-dark">Toetsenbordbediening</h6>
+                    <p class="text-muted" style="font-size: 0.95rem">Je website werkt ook zonder muis – handig voor veel gebruikers.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <i class="fa-solid fa-circle-check me-3" style="color: #3399ff; font-size: 1.5rem"></i>
+                  <div>
+                    <h6 class="mb-1 text-dark">Logische opbouw</h6>
+                    <p class="text-muted" style="font-size: 0.95rem">Een heldere structuur zorgt voor gebruiksgemak voor iedereen.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <p class="mt-4 text-muted">Ook als jouw bedrijf (nog) niet onder de wet valt, is dit een kans om je website klantvriendelijker én toekomstbestendig te maken.</p>
+          </div>
+
+          <div class="col-lg-5 text-center">
+            <div style="background-color: rgba(58, 141, 255, 0.08); border-radius: 12px; padding: 2rem">
+              <h5 class="fw-bold mb-3 text-dark">Voor wie is dit belangrijk?</h5>
+              <p class="text-muted">
+                85 miljoen mensen in Europa hebben een beperking. Digitale toegankelijkheid helpt hen, maar ook ouderen, mensen met tijdelijke beperkingen of iedereen die snel
+                informatie zoekt.
+              </p>
+              <img src="static/img/EAA-Logo.png" alt="EAA illustratie" class="img-fluid mt-3" style="max-height: 120px" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold mb-3">Veelgestelde vragen</h2>
+          <p class="text-muted">
+            Snel antwoord op de meest gestelde vragen. Staat je vraag er niet bij?
+            <a href="contact.html" class="text-primary fw-bold">Stuur me gerust een bericht</a>
+            .
+          </p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="accordion" id="faqAccordion">
+              <div class="accordion-item mb-3 rounded shadow-sm border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-normal py-3 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                    Wat gebeurt er na een kennismaking?
+                  </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">
+                    We bespreken je website en bekijken waar je tegenaan loopt. Je krijgt van mij eerlijke feedback en een voorstel op maat.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3 rounded shadow-sm border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-normal py-3 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                    Hoe snel krijg ik een rapport?
+                  </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">Meestal binnen 3 tot 5 werkdagen, afhankelijk van de grootte van je website.</div>
+                </div>
+              </div>
+              <div class="accordion-item mb-3 rounded shadow-sm border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-normal py-3 text-dark" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                    Moet ik technisch onderlegd zijn?
+                  </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body text-muted">Nee. Ik leg alles uit in begrijpelijke taal, met voorbeelden en duidelijke stappen.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="py-4" style="background: linear-gradient(135deg, #3a8dff 0%, #004aad 100%); color: #fff">
+      <div class="container text-center">
+        <p class="mb-0">
+          <a href="mailto:nils@pageaudit.be" style="color: #fff; text-decoration: underline">nils@pageaudit.be</a>
+          &nbsp;|&nbsp;
+          <a href="www.linkedin.com/in/nils-g-76379144" target="_blank" style="color: #fff; text-decoration: underline">LinkedIn</a>
+          &nbsp;|&nbsp; &copy; 2025 PageAudit
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
