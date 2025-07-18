@@ -426,3 +426,110 @@ h6 {
         margin-top: 0px;
     }
 }
+
+.icon-box {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+        transition: all 0.3s ease;
+        text-align: left;
+        height: 100%;
+      }
+      .icon-box:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+      }
+      .icon-box i {
+        color: #3a8dff;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .icon-box h5 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+        font-size: 1.2rem;
+      }
+      .icon-box p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+      .section-intro {
+        max-width: 700px;
+        margin: 0 auto 2rem auto;
+      }
+      .eea-section {
+        background: linear-gradient(135deg, #3a8dff 0%, #004aad 100%);
+        color: #fff;
+        border-radius: 16px;
+        padding: 3rem 2rem;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        margin-top: 4rem;
+        text-align: left;
+      }
+      .eea-section h3 {
+        font-weight: 700;
+        margin-bottom: 1rem;
+      }
+      .eea-section p {
+        color: #e0e7ff;
+      }
+      .eea-highlight {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
+        margin-top: 1.5rem;
+      }
+      .eea-highlight p {
+        margin: 0;
+        color: #ffffff;
+      }
+      .process-step {
+        background: #ffffff;
+        border: 1px solid #dee2e6;
+        border-radius: 16px;
+        padding: 2rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+        text-align: center;
+        transition: all 0.3s ease;
+        height: 100%;
+      }
+      .process-step:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+      }
+      .process-step img {
+        height: 70px;
+        margin-bottom: 1rem;
+      }
+      .process-step h4 {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+      .process-step p {
+        color: #6c757d;
+        font-size: 1rem;
+      }
+      .accordion-button {
+        background-color: #fff;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        font-weight: 400;
+        font-size: 1.1rem;
+      }
+
+      .accordion-button:not(.collapsed) {
+        background-color: #f1f5f9;
+        color: #196cd4;
+        box-shadow: none;
+        font-weight: 500;
+      }
+
+      .accordion-button:focus {
+        box-shadow: none;
+        border-color: transparent;
+      }
+
+      .accordion-body {
+        font-size: 1rem;
+      }
