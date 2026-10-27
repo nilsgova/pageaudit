@@ -195,8 +195,8 @@ form.audit{background:var(--paper);border:1px solid var(--rule);border-radius:va
 .contact aside ul li{padding:4px 0}
 .ic-link{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
 .ic-link span{text-decoration:underline}
-.ic-link svg{flex:none;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
-.ic-link img{flex:none;display:block}
+.ic-link svg{flex:none;margin-right:3.5px;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ic-link img{flex:none;display:block;height:20px;width:auto}
 
 /* tijdlijn */
 ol.tl{list-style:none;margin:0 0 8px;padding:0}
