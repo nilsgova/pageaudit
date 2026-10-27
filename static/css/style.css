@@ -20,7 +20,7 @@
  --r-btn:6px;--r-field:6px;--r-card:12px;--r-lg:16px;
  --shadow:0 8px 24px rgba(0,0,0,.05);--shadow-nav:0 2px 8px rgba(0,0,0,.05);
  /* ruimte */
- --sp-section:88px;--sp-short:64px;--sp-long:104px;--sp-section-m:56px;--sp-short-m:44px;--sp-long-m:64px;--maxw:1080px}
+ --sp-section:88px;--sp-short:64px;--sp-long:104px;--sp-section-m:56px;--sp-short-m:56px;--sp-long-m:56px;--maxw:1080px}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
@@ -61,7 +61,9 @@ p{margin:0 0 12px}
 .hero .sub{font-size:18px;line-height:1.6;color:var(--ink2);margin:0 0 32px;max-width:52ch}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin:0 0 20px}
 .cta-row .txt{font-weight:var(--w-strong)}
-.facts{font-size:15px;color:var(--ink3);margin:0}
+.facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0;font-size:15px;color:var(--ink3)}
+.facts li{white-space:nowrap}
+.facts li+li::before{content:"·";margin:0 .6em}
 .hero-art{text-align:center;line-height:0}
 .hero-art img{width:100%;max-width:380px;height:auto}
 .hero.slim .hero-body{padding-top:56px;padding-bottom:0}
@@ -130,11 +132,13 @@ details[open]>summary .chev{transform:rotate(-135deg)}
 
 /* stappen: een reeks, dus genummerd, zonder kaarten */
 ol.how{list-style:none;margin:48px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
-ol.how .pn{display:block;margin-bottom:12px}
-ol.how h3{font-size:22px;margin:0 0 8px}
-ol.how p{margin:0;color:var(--ink2)}
+ol.how li{display:grid;grid-template-columns:auto 1fr;column-gap:12px;align-items:baseline}
+ol.how .pn{grid-column:1;font-size:28px}
+ol.how h3{grid-column:2;font-size:22px;margin:0}
+ol.how p{grid-column:1/-1;margin:8px 0 0;color:var(--ink2)}
 
 /* prijs */
+.p-big,.p-rest{display:inline}
 .price-cols{display:grid;grid-template-columns:1fr 1fr;gap:56px;max-width:900px;margin:40px auto 0}
 .price-cols h3{font-size:20px;margin:0 0 6px}
 .price-cols ul{list-style:none;margin:0;padding:0}
@@ -222,11 +226,16 @@ footer.foot a{font-weight:500}
 
 @media(max-width:900px){
  .hero-grid{grid-template-columns:minmax(0,1fr)}
- .hero-art{display:none}
- .hero-body{padding-top:40px;padding-bottom:56px}
+ .hero-art{margin:36px auto 0}
+ .hero-art img{max-width:280px}
+ .hero .hero-body{padding-top:40px;padding-bottom:56px}
+}
+@media(min-width:600px) and (max-width:899px){
+ .items{display:grid;grid-template-columns:1fr 1fr;column-gap:40px;max-width:none}
+ .items li:last-child{border-bottom:0}
 }
 @media(max-width:820px){
- .in{padding:0 16px}
+ .in{padding-left:20px;padding-right:20px}
  main section{padding:var(--sp-section-m) 0}
  main section.flush{padding:32px 0 var(--sp-section-m)}
  main section[aria-labelledby=krijgt],main section[aria-labelledby=werkt]{padding:var(--sp-short-m) 0}
@@ -242,7 +251,32 @@ footer.foot a{font-weight:500}
  main section.closer{padding:56px 0}
 }
 @media(max-width:640px){
- .btn{width:100%}.site-h .btn{width:auto}
+ .btn{width:100%}
+ .site-h .btn{width:auto;min-height:44px;padding:0 14px;font-size:14px}
+ .site-h .logo img{height:32px;width:auto}
+ .site-h .bar{min-height:60px}
+ .site-h .logo{display:flex;align-items:center;min-height:44px}
+ .cta-row .txt{display:inline-flex;align-items:center;justify-content:center;min-height:44px}
+ .ic-link{min-height:44px}
+ .contact aside ul li{padding:0}
+ footer.foot a{display:inline-flex;align-items:center;min-height:44px}
+ footer.foot ul{gap:0 22px}
+ .hero .sub{font-size:17px}
+ .facts{flex-direction:column;align-items:center;text-align:center;gap:2px}
+ .facts li+li::before{display:none}
+ .lede,.note,.vr,.pay{text-align:left}
+ .lede{margin-bottom:28px}
+ .items{margin-top:24px}
+ .items li{padding:12px 0}
+ .items b{line-height:1.35}
+ .items span{display:block;font-size:15px;line-height:1.45}
+ .p-big{display:block;font:var(--w-head) 56px/1.05 var(--font-head);color:var(--blue-link)}
+ .p-rest{display:block;text-wrap:balance;margin-top:6px;font:400 17px/1.4 var(--font-body);color:var(--ink2)}
+ .price-cols{margin-top:28px}
+ .price-cols li{padding:9px 0;font-size:15px;line-height:1.45}
+ .portrait{margin:0 auto}
+ main section.closer{text-align:left}
+ .closer h2,.closer p{margin-left:0;margin-right:0}
  .cta-row{flex-direction:column;align-items:stretch;text-align:center}
  table.tr-ans,table.tr-ans tbody,table.tr-ans tr,table.tr-ans td{display:block;width:auto}
  table.tr-ans tr{padding:18px 16px 16px;border-top:1px solid var(--rule)}
