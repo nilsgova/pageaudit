@@ -20,7 +20,7 @@
  --r-btn:6px;--r-field:6px;--r-card:12px;--r-lg:16px;
  --shadow:0 8px 24px rgba(0,0,0,.05);--shadow-nav:0 2px 8px rgba(0,0,0,.05);
  /* ruimte */
- --sp-section:88px;--sp-section-m:56px;--maxw:1080px}
+ --sp-section:88px;--sp-short:64px;--sp-long:104px;--sp-section-m:56px;--sp-short-m:44px;--sp-long-m:64px;--maxw:1080px}
 
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
@@ -56,23 +56,25 @@ p{margin:0 0 12px}
 
 /* hero */
 .hero-body{padding-top:80px;padding-bottom:88px}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:56px;align-items:center}
-.hero h1{font-size:clamp(30px,3.5vw,42px);line-height:1.2;margin:0 0 20px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:40px;align-items:center}
+.hero h1{font-size:clamp(30px,3.5vw,42px);line-height:1.2;margin:0 0 20px;text-wrap:balance}
 .hero .sub{font-size:18px;line-height:1.6;color:var(--ink2);margin:0 0 32px;max-width:52ch}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin:0 0 20px}
 .cta-row .txt{font-weight:var(--w-strong)}
 .facts{font-size:15px;color:var(--ink3);margin:0}
 .hero-art{text-align:center;line-height:0}
 .hero-art img{width:100%;max-width:380px;height:auto}
-.hero.slim .hero-body{padding-top:56px;padding-bottom:8px}
+.hero.slim .hero-body{padding-top:56px;padding-bottom:0}
 .hero.slim h1{font-size:clamp(30px,4vw,40px);margin-bottom:10px}
 .hero.slim .sub{margin-bottom:0}
 
 /* secties */
 main section{padding:var(--sp-section) 0}
 main section.alt{background:var(--bg-soft)}
-main section.flush{padding:32px 0 var(--sp-section)}
-.sec-h{font-size:clamp(26px,3vw,34px);line-height:1.25;text-align:center;margin:0 auto 20px;max-width:30ch}
+main section.flush{padding:40px 0 var(--sp-section)}
+main section[aria-labelledby=krijgt],main section[aria-labelledby=werkt]{padding:var(--sp-short) 0}
+main section#voorbeeld,main section[aria-labelledby=prijs]{padding:var(--sp-long) 0}
+.sec-h{font-size:clamp(24px,2.6vw,30px);line-height:1.25;text-align:center;margin:0 auto 20px;max-width:30ch}
 .sec-h+.lede{margin-top:0}
 .lede{color:var(--ink2);max-width:62ch;margin:0 auto 40px;font-size:17px;text-align:center}
 .sec-h:last-child{margin-bottom:0}
@@ -94,7 +96,8 @@ main section.flush{padding:32px 0 var(--sp-section)}
 .note{margin:28px auto 0;color:var(--ink2);max-width:62ch;text-align:center}
 
 /* voorbeeld: dezelfde opbouw als het rapport, met de dots voor ernst */
-.sample{max-width:900px;margin:0 auto}
+.sample{max-width:1000px;margin:0 auto}
+.sample-cap{margin:0 0 28px;padding-bottom:12px;border-bottom:1px solid var(--rule);color:var(--ink3);font-size:14px;font-weight:var(--w-strong)}
 .sample h3{font-size:21px;margin:0 0 14px}
 .sample h3~h3{margin-top:40px}
 .tablebox{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-card);overflow-x:auto}
@@ -157,11 +160,12 @@ dl.tr-facts dd{margin:0;max-width:62ch}
 
 /* faq */
 .faqs{max-width:780px;margin:0 auto}
-details.faq{background:var(--paper);border-radius:8px;margin:0 0 12px;box-shadow:var(--shadow)}
-details.faq>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:1fr 18px;gap:0 14px;align-items:center;padding:18px 22px;font-size:17px;line-height:1.35;border-radius:8px}
+details.faq{border-top:1px solid var(--rule)}
+details.faq:last-child{border-bottom:1px solid var(--rule)}
+details.faq>summary{cursor:pointer;list-style:none;display:grid;grid-template-columns:1fr 18px;gap:0 14px;align-items:center;padding:20px 4px;font-size:17px;line-height:1.35}
 details.faq>summary::-webkit-details-marker{display:none}
-details.faq[open]>summary{background:var(--blue-tint);color:var(--blue-link);font-weight:500}
-details.faq .ans{padding:14px 22px 20px;max-width:66ch;color:var(--ink2)}
+details.faq[open]>summary{color:var(--blue-link);font-weight:500}
+details.faq .ans{padding:0 4px 24px;max-width:66ch;color:var(--ink2)}
 details.faq .ans p{margin:0}
 
 /* slot */
@@ -197,8 +201,8 @@ form.audit{background:var(--paper);border:1px solid var(--rule);border-radius:va
 /* tijdlijn */
 ol.tl{list-style:none;margin:0 0 8px;padding:0}
 ol.tl li{position:relative;padding:0 0 24px 44px;max-width:66ch}
-ol.tl .n{position:absolute;left:0;top:-2px;font:var(--w-head) 26px/1 var(--font-head);color:var(--blue-link)}
-ol.tl b{display:block;font-size:17px;margin:0 0 2px;font-weight:var(--w-strong)}
+ol.tl .n{position:absolute;left:0;top:0;font:var(--w-head) 22px/28px var(--font-head);color:var(--blue-link)}
+ol.tl b{display:block;font-size:17px;line-height:28px;margin:0 0 2px;font-weight:var(--w-strong)}
 ul.lines{margin:0 0 16px;padding:0 0 0 20px;max-width:66ch;color:var(--ink2)}
 ul.lines li{padding:4px 0}
 
@@ -214,7 +218,7 @@ mark.todo{background:var(--mark-bg);color:inherit;padding:0 4px;border-radius:3p
 footer.foot{padding:36px 0 48px;background:var(--bg-soft);color:var(--ink3);font-size:14px;text-align:center}
 footer.foot p{margin:0 0 6px}
 footer.foot ul{list-style:none;margin:14px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 24px}
-footer.foot a{font-weight:var(--w-strong)}
+footer.foot a{font-weight:500}
 
 @media(max-width:900px){
  .hero-grid{grid-template-columns:minmax(0,1fr)}
@@ -224,7 +228,9 @@ footer.foot a{font-weight:var(--w-strong)}
 @media(max-width:820px){
  .in{padding:0 16px}
  main section{padding:var(--sp-section-m) 0}
- main section.flush{padding:24px 0 var(--sp-section-m)}
+ main section.flush{padding:32px 0 var(--sp-section-m)}
+ main section[aria-labelledby=krijgt],main section[aria-labelledby=werkt]{padding:var(--sp-short-m) 0}
+ main section#voorbeeld,main section[aria-labelledby=prijs]{padding:var(--sp-long-m) 0}
  .cards3,ol.how,.price-cols,.contact,.about{grid-template-columns:minmax(0,1fr)}
  .cards3{margin-top:32px}
  ol.how{gap:32px;margin-top:32px}
@@ -253,3 +259,4 @@ footer.foot a{font-weight:var(--w-strong)}
  form.audit{padding:22px}
 }
 @media print{.skip,.btn{display:none}}
+.pay .vr{text-align:left;margin:0}
