@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Een rapport dat nul klikken toonde",
+    "summary": "Het campagnerapport meldde geen enkele klik op de hero banner. In GA4 bleken het er honderden per taal: de gratis heatmap-tool had te weinig sessies om iets te tonen. Dezelfde check bracht ook een knop aan het licht die drie keer op de pagina stond, telkens met hetzelfde event.",
+    "url": "https://www.linkedin.com/feed/update/urn:li:activity:7470188919888891905/"
+  },
+  {
+    "title": "Een filterknop die niemand kan aanklikken",
+    "summary": "Op de mobiele catalogus van een grote fabrikant van schakelaars viel de knop om filters toe te passen telkens onder de navigatiebalk van Safari. Op een iPhone geraakte ik niet verder. Bij een site met vooral mobiele bezoekers kost zo'n detail elke dag klanten.",
+    "url": "https://www.linkedin.com/posts/nils-govaerts_cro-ux-mobileux-share-7462574057125826560-7jlD/"
+  },
+  {
+    "title": "Minder bezoekers via Google, maar betere",
+    "summary": "Als AI-antwoorden in Google meer zoekopdrachten afvangen, komt wie nog doorklikt met een duidelijk doel. Die bezoeker beslist snel en haakt even snel af bij een traag of omslachtig formulier. De website wordt minder uithangbord en meer een instrument dat moet werken.",
+    "url": "https://www.linkedin.com/posts/nils-govaerts_digitalperformance-cro-digitalstrategy-share-7464350468589154304-KZ5c/"
+  }
+]
