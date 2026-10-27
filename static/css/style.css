@@ -189,6 +189,10 @@ form.audit{background:var(--paper);border:1px solid var(--rule);border-radius:va
 .contact aside ol li{padding:4px 0 4px 4px}
 .contact aside ul{list-style:none;margin:0;padding:0}
 .contact aside ul li{padding:4px 0}
+.ic-link{display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.ic-link span{text-decoration:underline}
+.ic-link svg{flex:none;stroke:var(--blue);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.ic-link img{flex:none;display:block}
 
 /* tijdlijn */
 ol.tl{list-style:none;margin:0 0 8px;padding:0}
