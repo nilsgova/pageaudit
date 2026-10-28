@@ -10,7 +10,7 @@
  --rule:#dee2e6;--field:#7f8b9c;
  --blue:#196cd4;--blue-d:#155ab2;--blue-link:#196cd4;--blue-bright:#3a8dff;--blue-tint:rgba(58,141,255,.08);--on-blue:#fff;
  --sev-error:#d64545;--sev-info:#6f7c8e;--sev-good:#196cd4;
- --mark-bg:#fff3bf;--mark-line:#b78103;
+
  /* lettertype */
  --font-head:"Neue Haas Grotesk Display","Helvetica Neue",Arial,sans-serif;
  --font-body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
@@ -224,7 +224,6 @@ ul.lines li{padding:4px 0}
 .prose h2:first-child{margin-top:0}
 
 /* placeholders die u nog invult */
-mark.todo{background:var(--mark-bg);color:inherit;padding:0 4px;border-radius:3px;outline:1px dashed var(--mark-line)}
 
 /* footer */
 footer.foot{padding:36px 0 48px;background:var(--bg-soft);color:var(--ink3);font-size:14px;text-align:center}
