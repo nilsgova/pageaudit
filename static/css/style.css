@@ -192,9 +192,13 @@ details.faq .ans p{margin:0}
 main section.closer{background:var(--blue);color:#fff;text-align:center;padding:80px 0}
 .closer h2{font-size:clamp(28px,3.6vw,38px);line-height:1.2;margin:0 auto 14px;max-width:24ch;color:#fff}
 .closer p{color:#fff;font-size:18px;margin:0 auto 28px;max-width:52ch}
-.closer .btn{background:#fff;color:var(--blue-d);border-color:#fff}
-.closer .btn:hover,.closer .btn:focus-visible{background:#e8f0fc;border-color:#e8f0fc}
-.closer .btn:focus-visible{outline-color:#fff}
+.closer .btn,.band .btn{background:#fff;color:var(--blue-d);border-color:#fff}
+.closer .btn:hover,.closer .btn:focus-visible,.band .btn:hover,.band .btn:focus-visible{background:#e8f0fc;border-color:#e8f0fc}
+.closer .btn:focus-visible,.band .btn:focus-visible{outline-color:#fff}
+main section.band{background:var(--blue);color:#fff;text-align:center;padding:52px 0}
+.band blockquote{margin:0 auto 12px;max-width:760px}
+.band blockquote p{margin:0;font:var(--w-head) clamp(24px,2.6vw,30px)/1.3 var(--font-head);letter-spacing:-.02em;text-wrap:balance;color:#fff}
+.band .by{margin:0 0 24px;font-size:15px;color:#fff}
 .closer p.price{font-size:15px;margin:18px auto 0}
 
 /* formulier */
@@ -267,6 +271,9 @@ footer.foot a{font-weight:500}
  .pbody{padding-left:20px}
  details.plan>summary{grid-template-columns:34px 1fr auto}
  main section.closer{padding:56px 0}
+ main section.band{padding:40px 0;text-align:left}
+ .band blockquote{margin-left:0;margin-right:0}
+ .band blockquote p{font-size:22px}
 }
 @media(max-width:640px){
  .btn{width:100%}
