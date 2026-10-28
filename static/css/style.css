@@ -65,11 +65,8 @@ p{margin:0 0 12px}
 .facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 0;font-size:15px;color:var(--ink3)}
 .facts li{white-space:nowrap}
 .facts li+li::before{content:"·";margin:0 .6em}
-.hero-art{margin:0;text-align:center}
-.hero-art img{display:block;width:100%;max-width:280px;height:auto;margin:0 auto}
-.hero-art figcaption{margin-top:12px;line-height:1.4}
-.hero-art b{display:block;font-weight:var(--w-strong);color:var(--ink)}
-.hero-art span{display:block;font-size:15px;color:var(--ink3)}
+.hero-art{text-align:center;line-height:0}
+.hero-art img{width:100%;max-width:380px;height:auto}
 .hero.slim .hero-body{padding-top:56px;padding-bottom:0}
 .hero.slim h1{font-size:clamp(30px,4vw,40px);margin-bottom:10px}
 .hero.slim .sub{margin-bottom:0}
@@ -169,11 +166,17 @@ dl.tr-facts dd{margin:0;max-width:62ch}
 .follow{margin:40px 0 0}
 
 /* over mij */
-main section.left .sec-h{text-align:left;margin-left:0;margin-right:0;max-width:none}
-main section.left .lede{text-align:left;margin-left:0;margin-right:0}
-.cards3.flat .icon-box{box-shadow:none;border:1px solid var(--rule)}
-.about{margin-top:48px}
-.about p{max-width:62ch;font-size:17px;margin:0 0 16px}
+main section[aria-labelledby=waarom] .lede{max-width:640px}
+h2{text-wrap:balance}
+.about{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:64px;align-items:center;max-width:960px;margin:0 auto}
+.portrait{margin:0;line-height:0}
+.portrait img{display:block;width:100%;height:auto}
+.about-text h2{font-size:clamp(24px,2.6vw,30px);line-height:1.25;margin:0 0 12px}
+.about .who{margin:0 0 16px;line-height:1.4}
+.about .who b{display:block;font-weight:var(--w-strong);color:var(--ink)}
+.about .who span{display:block;color:var(--ink3)}
+.about p{max-width:56ch;font-size:17px;margin:0 0 16px}
+.about p:last-child{margin-bottom:0}
 
 /* faq */
 .faqs{max-width:780px;margin:0 auto}
@@ -239,9 +242,8 @@ footer.foot a{font-weight:500}
 @media(max-width:900px){
  .hero-grid{grid-template-columns:minmax(0,1fr)}
  .hero-grid{gap:0}
- .hero-art{order:-1;display:flex;align-items:center;gap:16px;margin:0 0 20px;text-align:left}
- .hero-art img{width:112px;margin:0;flex:none}
- .hero-art figcaption{margin:0}
+ .hero-art{order:-1;margin:0 auto -8px}
+ .hero-art img{max-width:190px}
  .hero .hero-body{padding-top:32px;padding-bottom:56px}
 }
 @media(min-width:600px) and (max-width:899px){
@@ -254,7 +256,8 @@ footer.foot a{font-weight:500}
  main section.flush{padding:32px 0 var(--sp-section-m)}
  main section[aria-labelledby=krijgt],main section[aria-labelledby=werkt]{padding:var(--sp-short-m) 0}
  main section#voorbeeld,main section[aria-labelledby=prijs]{padding:var(--sp-long-m) 0}
- .cards3,ol.how,.price-cols,.contact,.posts{grid-template-columns:minmax(0,1fr)}
+ .cards3,ol.how,.price-cols,.contact,.about,.posts{grid-template-columns:minmax(0,1fr)}
+ .about{gap:24px}.portrait{max-width:200px;margin:0 auto}
  .post{padding:24px 0 28px}
  .follow{margin-top:12px}
  .cards3{margin-top:32px}
