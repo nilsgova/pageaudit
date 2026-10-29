@@ -1,8 +1,6 @@
 /* PageAudit: wit, rustig, veel lucht. Blauw voor knoppen en accenten.
    Alle keuzes staan als tokens op :root (zie _reference/design-tokens.md). */
-@font-face{font-family:Inter;src:url("/static/fonts/inter-400.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:Inter;src:url("/static/fonts/inter-500.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:Inter;src:url("/static/fonts/inter-600.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:Inter;src:url("/static/fonts/inter-var.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 :root{color-scheme:light;
  /* kleur */
@@ -17,7 +15,7 @@
  --font-head:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
  --font-body:Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
  --font-mono:ui-monospace,SFMono-Regular,Menlo,monospace;
- --w-head:600;--w-body:400;--w-strong:600;
+ --w-head:700;--w-display:800;--w-body:400;--w-strong:600;
  /* vorm */
  --r-btn:12px;--r-field:6px;--r-card:20px;--r-lg:16px;--r-xl:24px;
  --shadow:0 8px 24px rgba(0,0,0,.05);--shadow-nav:0 2px 8px rgba(0,0,0,.05);
@@ -28,7 +26,7 @@
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 var(--font-body)}
 h1,h2,h3{font-family:var(--font-head);font-weight:var(--w-head);color:var(--ink);letter-spacing:-.02em;font-kerning:normal}
-h1,h2{text-align:center}
+h1,h2{text-align:center;font-weight:var(--w-display);letter-spacing:-.03em}
 a{color:var(--blue-link)}
 a:focus-visible,summary:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:2px solid var(--blue-bright);outline-offset:2px;border-radius:3px}
 img{max-width:100%;height:auto}
@@ -63,7 +61,7 @@ p{margin:0 0 12px}
 /* hero: wit, gecentreerd */
 .hero{text-align:center}
 .hero-body{padding-top:88px;padding-bottom:96px}
-.hero h1{font-size:clamp(32px,4.4vw,52px);line-height:1.15;margin:0 auto 24px;max-width:21ch;text-wrap:balance}
+.hero h1{font-size:clamp(34px,5vw,60px);line-height:1.08;margin:0 auto 28px;max-width:20ch;text-wrap:balance}
 .hero h1 .accent{color:var(--blue)}
 .hero .sub{font-size:19px;line-height:1.6;color:var(--ink2);margin:0 auto 36px;max-width:60ch}
 .cta-row{display:flex;flex-direction:column;align-items:center;margin:0 0 28px}
@@ -71,8 +69,11 @@ p{margin:0 0 12px}
 .facts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 0;font-size:15px;color:var(--ink3)}
 .facts li{white-space:nowrap}
 .facts li+li::before{content:"·";margin:0 .6em}
+.hero-art{display:none;line-height:0}
+.hero-art img{width:100%;max-width:400px;height:auto}
+@media(min-width:900px){.hero-art{display:block;margin:56px auto -24px}}
 .hero.slim .hero-body{padding-top:56px;padding-bottom:0}
-.hero.slim h1{font-size:clamp(30px,4vw,40px);margin-bottom:12px;max-width:none}
+.hero.slim h1{font-size:clamp(32px,4.4vw,48px);margin-bottom:12px;max-width:none}
 .hero.slim .sub{margin-bottom:0;font-size:17px;max-width:56ch}
 
 /* secties */
@@ -81,7 +82,7 @@ main section.alt{background:var(--bg-soft)}
 main section.flush{padding:40px 0 var(--sp-section)}
 main section[aria-labelledby=krijgt],main section[aria-labelledby=werkt]{padding:var(--sp-short) 0}
 main section#voorbeeld,main section[aria-labelledby=prijs]{padding:var(--sp-long) 0}
-.sec-h{font-size:clamp(24px,2.6vw,30px);line-height:1.25;text-align:center;margin:0 auto 32px;max-width:30ch}
+.sec-h{font-size:clamp(28px,3.4vw,40px);line-height:1.12;text-align:center;margin:0 auto 32px;max-width:24ch}
 .sec-h+.lede{margin-top:0}
 .lede{color:var(--ink2);max-width:62ch;margin:0 auto 40px;font-size:17px;text-align:center}
 .sec-h:last-child{margin-bottom:0}
@@ -182,8 +183,8 @@ ol.how p{margin:0;color:var(--ink2)}
 /* over mij */
 main section[aria-labelledby=waarom] .lede{max-width:640px}
 h2{text-wrap:balance}
-.about{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:64px;align-items:center;max-width:960px;margin:0 auto}
-.about-h{margin-bottom:40px}
+.about{display:grid;grid-template-columns:minmax(0,280px) minmax(0,1fr);gap:64px;align-items:start;max-width:960px;margin:0 auto}
+.about-text h2{text-align:left;font-size:clamp(28px,3.4vw,40px);line-height:1.12;margin:0 0 32px}
 .portrait{margin:0;line-height:0}
 .portrait img{display:block;width:100%;height:auto}
 .about .who{margin:0 0 16px;line-height:1.4}
@@ -207,7 +208,7 @@ details.faq .ans p{margin:0}
 main section.band{padding:0 0 var(--sp-short)}
 main section.closer{padding:0 0 var(--sp-section)}
 .closer .tint{background:var(--tint-b)}
-.closer h2{font-size:clamp(26px,3.4vw,36px);line-height:1.2;margin:0 auto 32px;max-width:28ch}
+.closer h2{font-size:clamp(28px,3.6vw,42px);line-height:1.12;margin:0 auto 32px;max-width:28ch}
 .closer p{color:var(--ink2);font-size:18px;margin:0 auto 28px;max-width:52ch}
 .closer p.micro{font-size:14px;margin:12px auto 0;color:var(--ink3)}
 .closer p.price{font-size:15px;margin:6px auto 0}
@@ -275,7 +276,7 @@ footer.foot a{font-weight:500}
  main section#voorbeeld,main section[aria-labelledby=prijs]{padding:var(--sp-long-m) 0}
  .cards3,.price-cols,.contact,.about,.posts{grid-template-columns:minmax(0,1fr)}
  .sec-h,.closer h2{margin-bottom:24px}
- .about-h{margin-bottom:28px}
+ .about-text h2{margin-bottom:24px}
  .about{gap:24px}.portrait{max-width:200px;margin:0 auto}
  .post{padding:24px 0 28px}
  .follow{margin-top:12px}
