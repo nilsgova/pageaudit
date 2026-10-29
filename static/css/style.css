@@ -71,7 +71,7 @@ p{margin:0 0 12px}
 .facts li+li::before{content:"·";margin:0 .6em}
 .hero-art{display:none;line-height:0}
 .hero-art img{width:100%;max-width:400px;height:auto}
-@media(min-width:900px){.hero-art{display:block;margin:56px auto -24px}}
+@media(min-width:900px){.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:48px;align-items:center}.hero-art{display:block}.hero-art img{max-width:300px}}
 .hero.slim .hero-body{padding-top:56px;padding-bottom:0}
 .hero.slim h1{font-size:clamp(32px,4.4vw,48px);margin-bottom:12px;max-width:none}
 .hero.slim .sub{margin-bottom:0;font-size:17px;max-width:56ch}
